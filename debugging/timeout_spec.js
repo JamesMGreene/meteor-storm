@@ -28,7 +28,7 @@ describe('timeout possibilities', function() {
     expect(true).toEqual(true);
   });
 
-  describe('waitForAngular', function() {
+  describe('waitForMeteor', function() {
     it('should timeout and give a reasonable message', function() {
 
       browser.driver.manage().timeouts().setScriptTimeout(55);

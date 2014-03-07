@@ -5,8 +5,8 @@ describe('modes of failure', function() {
   it('should fail to find a non-existent element', function() {
     browser.get('index.html#/form');
 
-    // Run this statement before the line which fails. If protractor is run
-    // with the debugger (protractor debug debugging/conf.js), the test
+    // Run this statement before the line which fails. If storm is run
+    // with the debugger (storm debug debugging/conf.js), the test
     // will pause after loading the webpage but before trying to find the
     // element.
     browser.debugger();
@@ -20,7 +20,7 @@ describe('modes of failure', function() {
     element(by.id("hiddenbutton")).click();
   });
 
-  it('should fail to use protractor on a non-Angular site', function() {
+  it('should fail to use storm on a non-Angular site', function() {
     browser.get('http://www.google.com');
   }, 20000);
 

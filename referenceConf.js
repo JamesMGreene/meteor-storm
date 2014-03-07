@@ -17,7 +17,7 @@ exports.config = {
   // The location of the selenium standalone server .jar file, relative
   // to the location of this config. If no other method of starting selenium
   // is found, this will default to
-  // node_modules/protractor/selenium/selenium-server...
+  // node_modules/storm/selenium/selenium-server...
   seleniumServerJar: null,
   // The port to start the selenium server on, or null if the server should
   // find its own unused port.
@@ -40,7 +40,7 @@ exports.config = {
   sauceUser: null,
   sauceKey: null,
 
-  // The address of a running selenium server. If specified, Protractor will
+  // The address of a running selenium server. If specified, MeteorStorm will
   // connect to an already running instance of selenium. This usually looks like
   // seleniumAddress: 'http://localhost:4444/wd/hub'
   seleniumAddress: null,
@@ -76,7 +76,7 @@ exports.config = {
 
   // ----- More information for your tests ----
   //
-  // A base URL for your application under test. Calls to protractor.get()
+  // A base URL for your application under test. Calls to storm.get()
   // with relative paths will be prepended with this.
   baseUrl: 'http://localhost:8000',
 
@@ -84,18 +84,18 @@ exports.config = {
   // body, but is necessary if ng-app is on a descendant of <body>  
   rootElement: 'body',
 
-  // A callback function called once protractor is ready and available, and
+  // A callback function called once storm is ready and available, and
   // before the specs are executed
   // You can specify a file containing code to run by setting onPrepare to
   // the filename string.
   onPrepare: function() {
-    // At this point, global 'protractor' object will be set up, and jasmine
+    // At this point, global 'storm' object will be set up, and jasmine
     // will be available. For example, you can add a Jasmine reporter with:
     //     jasmine.getEnv().addReporter(new jasmine.JUnitXmlReporter(
     //         'outputdir/', true, true));
   },
 
-  // The params object will be passed directly to the protractor instance,
+  // The params object will be passed directly to the storm instance,
   // and can be accessed from your test. It is an arbitrary object and can
   // contain anything you may need in your test.
   // This can be changed via the command line as:

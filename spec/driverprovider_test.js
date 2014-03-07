@@ -3,7 +3,7 @@
  *
  * Assumed setup:
  * - selenium server running locally at http://localhost:4444
- * - selenium jar and chromedriver in protractor/selenium, where
+ * - selenium jar and chromedriver in storm/selenium, where
  *   webdriver-manager stores them.
  * - if you want to test saucelabs, test with --sauceUser and --sauceKey
  *

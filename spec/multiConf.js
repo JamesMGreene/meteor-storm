@@ -1,4 +1,4 @@
-// The main suite of Protractor tests.
+// The main suite of MeteorStorm tests.
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
 

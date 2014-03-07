@@ -2,19 +2,19 @@
 
 /**
  * This is an explorer to help get the right element locators, and test out what
- * Protractor commands will do on your site without running a full test suite.
+ * MeteorStorm commands will do on your site without running a full test suite.
  *
  * This beta version only uses the Chrome browser.
  *
  * Usage:
  *
  * Expects a selenium standalone server to be running at http://localhost:4444
- * from protractor directory, run with:
+ * from storm directory, run with:
  *
  *     ./bin/elementexplorer.js <urL>
  *
  * This will load up the URL on webdriver and put the terminal into a REPL loop.
- * You will see a > prompt. The `browser`, `element` and `protractor` variables
+ * You will see a > prompt. The `browser`, `element` and `storm` variables
  * will be available. Enter a command such as:
  *
  *     > element(by.id('foobar')).getText()
@@ -34,7 +34,7 @@
  */
 
 var webdriver = require('selenium-webdriver');
-var protractor = require('../lib/protractor.js');
+var storm = require('../lib/storm.js');
 var repl = require('repl');
 var util = require('util');
 var vm = require('vm');
@@ -45,10 +45,10 @@ var INITIAL_SUGGESTIONS = [
   'element(by.id(\'\'))',
   'element(by.css(\'\'))',
   'element(by.name(\'\'))',
-  'element(by.binding(\'\'))',
-  'element(by.input(\'\'))',
-  'element(by.select(\'\'))',
-  'element(by.textarea(\'\'))',
+//  'element(by.binding(\'\'))',
+//  'element(by.input(\'\'))',
+//  'element(by.select(\'\'))',
+//  'element(by.textarea(\'\'))',
   'element(by.xpath(\'\'))',
   'element(by.tagName(\'\'))',
   'element(by.className(\'\'))'
@@ -124,16 +124,16 @@ var startUp = function() {
   driver.getSession().then(function(session) {
     driver.manage().timeouts().setScriptTimeout(11000);
 
-    browser = protractor.wrapDriver(driver);
+    browser = storm.wrapDriver(driver);
 
     // Set up globals to be available from the command line.
     global.driver = driver;
-    global.protractor = protractor;
+    global.storm = storm;
     global.browser = browser;
     global.$ = browser.$;
     global.$$ = browser.$$;
     global.element = browser.element;
-    global.by = global.By = protractor.By;
+    global.by = global.By = storm.By;
     global.list = list;
 
 

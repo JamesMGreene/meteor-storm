@@ -38,4 +38,4 @@ mochaOpts: {
 }
 ```
 
-See a full [example in protractor's own tests](https://github.com/angular/protractor/tree/master/spec/mocha).
+See a full [example in protractor's own tests](https://github.com/JamesMGreene/meteor-storm/tree/master/spec/mocha).

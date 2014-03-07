@@ -46,10 +46,10 @@ function generateDocs() {
 
       // Sort the files in the following order:
       // toc - table of contents
-      // protractor
+      // storm
       // locators
       // webdriver
-      var fileOrder = ['toc', 'protractor', 'locators', 'webdriver'];
+      var fileOrder = ['toc', 'storm', 'locators', 'webdriver'];
       fileOrder.forEach(function(fileName) {
         sortedFiles = sortedFiles.concat(grouped[fileName]);
       });

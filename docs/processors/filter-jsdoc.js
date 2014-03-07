@@ -29,7 +29,7 @@ var filterDocs = function(docs) {
 
 /**
  * Generate a unique file name with an index used to concatenate. The name has
- * the following format: 'protractor001.md'
+ * the following format: 'storm001.md'
  */
 var fileName = function(doc) {
   counter += 1;

@@ -1,11 +1,11 @@
-// Examples of tests to show how debugging works with Protractor. Tests
+// Examples of tests to show how debugging works with MeteorStorm. Tests
 // should be run against the testapp.
 
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
 
   // Spec patterns are relative to the current working directly when
-  // protractor is called.
+  // storm is called.
   specs: [
     'failure_spec.js',
   ],

@@ -7,14 +7,14 @@ describe('add-links', function() {
     linksProcessor.process(docs);
   };
 
-  it('should add protractor link', function() {
+  it('should add storm link', function() {
     var doc = {
-      fileName: 'protractor',
+      fileName: 'storm',
       startingLine: 123
     };
     addLinks([doc]);
-    expect(doc.sourceLink).toBe('https://github.com/angular/protractor/' +
-        'blob/master/lib/protractor.js#L123');
+    expect(doc.sourceLink).toBe('https://github.com/JamesMGreene/meteor-storm/' +
+        'blob/master/lib/storm.js#L123');
   });
 
   it('should add webdriver link', function() {
@@ -38,7 +38,7 @@ describe('add-links', function() {
   it('should add links to types', function() {
     var docWithFunction = {
       typeExpression: 'function(webdriver.WebElement, number)',
-      fileName: 'protractor',
+      fileName: 'storm',
       startingLine: 123,
       returns: {
         tagDef: {
@@ -90,12 +90,12 @@ describe('add-links', function() {
           tagName: 'param',
           description: '',
           startingLine: 171,
-          typeExpression: 'Protractor',
+          typeExpression: 'MeteorStorm',
           type: {
             type: 'NameExpression',
-            name: 'Protractor'
+            name: 'MeteorStorm'
           },
-          typeList: ['Protractor'],
+          typeList: ['MeteorStorm'],
           name: 'ptor'
         }
       ]
@@ -110,8 +110,8 @@ describe('add-links', function() {
       },
       docWithFunction,
       {
-        name: 'Protractor',
-        fileName: 'protractor',
+        name: 'MeteorStorm',
+        fileName: 'storm',
         startingLine: 3
       }
     ];
@@ -126,7 +126,7 @@ describe('add-links', function() {
     expect(getDesc(0)).toBe(
         'function([webdriver.WebElement](#webdriverwebelement), number)');
     expect(getDesc(1)).toBe(
-        '[Protractor](#protractor)');
+        '[MeteorStorm](#storm)');
 
     expect(docs[1].returnString).toBe(
         '[webdriver.WebElement](#webdriverwebelement)');

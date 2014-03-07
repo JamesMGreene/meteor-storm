@@ -51,7 +51,7 @@ a configuration file.
 
 The configuration file tells Protractor what tests to run, how to connect to a
 webdriver server, and various other options for reporting. See
-[referenceConf.js](https://github.com/angular/protractor/blob/master/referenceConf.js)
+[referenceConf.js](https://github.com/JamesMGreene/meteor-storm/blob/master/referenceConf.js)
 for an example and explanation of the options. This simple configuration is
 
 ```javascript
@@ -80,7 +80,7 @@ Writing tests
 -------------
 
 By default, Protractor uses [Jasmine](http://pivotal.github.io/jasmine/) as its
-test scaffolding. ([read about using mocha instead](https://github.com/angular/protractor/tree/master/docs/using-mocha.md)) Protractor exposes several global variables.
+test scaffolding. ([read about using mocha instead](https://github.com/JamesMGreene/meteor-storm/tree/master/docs/using-mocha.md)) Protractor exposes several global variables.
 
  * `browser` this is the a wrapper around an instance of webdriver. Used for
  navigation and page-wide information.
@@ -144,7 +144,7 @@ You may also use plain old WebDriver strategies such as `by.id` and
 `sendKeys`, `getText`, and `click`. Check out the [API](/docs/api.md) for a list of
 all available methods.
 
-See Protractor's [findelements test suite](https://github.com/angular/protractor/blob/master/spec/basic/findelements_spec.js)
+See Protractor's [findelements test suite](https://github.com/JamesMGreene/meteor-storm/blob/master/spec/basic/findelements_spec.js)
 for more examples.
 
 
@@ -157,9 +157,9 @@ There are a couple of things to watch out for!
 
 **If your page does manual bootstrap** Protractor will not be able to load your page using `browser.get`. Instead, use the base webdriver instance - `browser.driver.get`. This means that Protractor does not know when your page is fully loaded, and you may need to add a wait statement to make sure your tests avoid race conditions.
 
-**If your page uses $timeout for polling** Protractor will not be able to tell when your page is ready. Consider using $interval instead of $timeout and see [this issue](https://github.com/angular/protractor/issues/49) for further discussion.
+**If your page uses $timeout for polling** Protractor will not be able to tell when your page is ready. Consider using $interval instead of $timeout and see [this issue](https://github.com/JamesMGreene/meteor-storm/issues/49) for further discussion.
 
-If you need to do global preparation for your tests (for example, logging in), you can put this into the config in the `onPrepare` property. This property can be either a function or a filename. If a filename, Protractor will load that file with node.js and run its contents. See the [login tests](https://github.com/angular/protractor/blob/master/spec/login) for an example.
+If you need to do global preparation for your tests (for example, logging in), you can put this into the config in the `onPrepare` property. This property can be either a function or a filename. If a filename, Protractor will load that file with node.js and run its contents. See the [login tests](https://github.com/JamesMGreene/meteor-storm/blob/master/spec/login) for an example.
 
 
 Organizing Real Tests: Page Objects

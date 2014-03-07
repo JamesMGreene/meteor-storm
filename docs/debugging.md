@@ -11,7 +11,7 @@ advice on what to look for and how Protractor can help.
 Types of failure
 ----------------
 
-Protractor comes with [examples of failing tests](https://github.com/angular/protractor/blob/master/debugging/failure_spec.js).
+Protractor comes with [examples of failing tests](https://github.com/JamesMGreene/meteor-storm/blob/master/debugging/failure_spec.js).
 To run, start up the test application and a selenium server, and run
 
 ```
@@ -188,5 +188,5 @@ within the script execution timeout, Protractor will fail with the message
 
 If your website uses $timeout or $http to continuously poll, Protractor will
 interpret that as your site being busy and will time out on all requests. See
-[this issue](https://github.com/angular/protractor/issues/49) for more
+[this issue](https://github.com/JamesMGreene/meteor-storm/issues/49) for more
 information.

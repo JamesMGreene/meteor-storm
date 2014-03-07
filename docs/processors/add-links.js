@@ -1,7 +1,7 @@
 var _ = require('lodash');
 
 var templateMapping = {
-  protractor: _.template('https://github.com/angular/protractor/blob/' +
+  storm: _.template('https://github.com/JamesMGreene/meteor-storm/blob/' +
       'master/lib/<%= fileName %>.js#L<%= startingLine %>'),
   webdriver: _.template('https://code.google.com/p/selenium/source/browse/' +
       'javascript/webdriver/webdriver.js#<%= startingLine %>')
@@ -13,7 +13,7 @@ var templateMapping = {
  */
 var addLinkToSourceCode = function(doc) {
   var template = doc.fileName === 'webdriver' ?
-      templateMapping.webdriver : templateMapping.protractor;
+      templateMapping.webdriver : templateMapping.storm;
 
   doc.sourceLink = template(doc);
 };

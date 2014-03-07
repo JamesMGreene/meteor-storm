@@ -18,7 +18,7 @@ Protractor API
 * [elementArrayFinder.each](#elementarrayfindereach)
 * [elementArrayFinder.map](#elementarrayfindermap)
 * [Protractor](#protractor)
-* [Protractor.prototype.waitForAngular](#protractorprototypewaitforangular)
+* [Protractor.prototype.waitForMeteor](#protractorprototypewaitforangular)
 * [Protractor.prototype.wrapWebElement](#protractorprototypewrapwebelement)
 * [element.$](#element)
 * [element.findElement](#elementfindelement)
@@ -146,7 +146,7 @@ Protractor API
 * [webdriver.UnhandledAlertError](#webdriverunhandledalerterror)
 * [webdriver.UnhandledAlertError.prototype.getAlert](#webdriverunhandledalerterrorprototypegetalert)
 
-##[element](https://github.com/angular/protractor/blob/master/lib/protractor.js#L65)
+##[element](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L65)
 
 The element function returns an Element Finder. Element Finders do
 not actually attempt to find the element until a method is called on them,
@@ -195,7 +195,7 @@ Type | Description
 ElementFinder | 
 
 
-##[elementFinder.find](https://github.com/angular/protractor/blob/master/lib/protractor.js#L116)
+##[elementFinder.find](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L116)
 #### Use as: element(locator).find()
 Return the actual WebElement.
 
@@ -211,7 +211,7 @@ Type | Description
 [webdriver.WebElement](#webdriverwebelement) | 
 
 
-##[elementFinder.isPresent](https://github.com/angular/protractor/blob/master/lib/protractor.js#L126)
+##[elementFinder.isPresent](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L126)
 #### Use as: element(locator).isPresent()
 Determine whether an element is present on the page.
 
@@ -241,7 +241,7 @@ Type | Description
 !webdriver.promise.Promise | A promise which resolves to a boolean.
 
 
-##[elementFinder.element](https://github.com/angular/protractor/blob/master/lib/protractor.js#L148)
+##[elementFinder.element](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L148)
 #### Use as: element(locator).element()
 Calls to element may be chained to find elements within a parent.
 
@@ -289,7 +289,7 @@ Type | Description
 function(webdriver.Locator): ElementFinder | 
 
 
-##[elementFinder.$](https://github.com/angular/protractor/blob/master/lib/protractor.js#L179)
+##[elementFinder.$](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L179)
 #### Use as: element(locator).$()
 Shortcut for chaining css element finders.
 
@@ -333,7 +333,7 @@ Type | Description
 ElementFinder | 
 
 
-##[element.all](https://github.com/angular/protractor/blob/master/lib/protractor.js#L211)
+##[element.all](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L211)
 
 element.all is used for operations on an array of elements (as opposed
 to a single element).
@@ -374,7 +374,7 @@ Type | Description
 ElementArrayFinder | 
 
 
-##[elementArrayFinder.count](https://github.com/angular/protractor/blob/master/lib/protractor.js#L234)
+##[elementArrayFinder.count](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L234)
 #### Use as: element.all(locator).count()
 Count the number of elements found by the locator.
 
@@ -405,7 +405,7 @@ Type | Description
 !webdriver.promise.Promise | A promise which resolves to the number of elements matching the locator.
 
 
-##[elementArrayFinder.get](https://github.com/angular/protractor/blob/master/lib/protractor.js#L258)
+##[elementArrayFinder.get](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L258)
 #### Use as: element.all(locator).get()
 Get an element found by the locator by index. The index starts at 0.
 
@@ -444,7 +444,7 @@ Type | Description
 [webdriver.WebElement](#webdriverwebelement) | The element at the given index
 
 
-##[elementArrayFinder.first](https://github.com/angular/protractor/blob/master/lib/protractor.js#L284)
+##[elementArrayFinder.first](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L284)
 #### Use as: element.all(locator).first()
 Get the first element found using the locator.
 
@@ -475,7 +475,7 @@ Type | Description
 [webdriver.WebElement](#webdriverwebelement) | The first matching element
 
 
-##[elementArrayFinder.last](https://github.com/angular/protractor/blob/master/lib/protractor.js#L311)
+##[elementArrayFinder.last](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L311)
 #### Use as: element.all().last()
 Get the last matching element for the locator.
 
@@ -506,7 +506,7 @@ Type | Description
 [webdriver.WebElement](#webdriverwebelement) | the last matching element
 
 
-##[elementArrayFinder.each](https://github.com/angular/protractor/blob/master/lib/protractor.js#L343)
+##[elementArrayFinder.each](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L343)
 #### Use as: element.all().each()
 Calls the input function on each WebElement found by the locator.
 
@@ -540,7 +540,7 @@ fn | function([webdriver.WebElement](#webdriverwebelement)) | Input function
 
 
 
-##[elementArrayFinder.map](https://github.com/angular/protractor/blob/master/lib/protractor.js#L370)
+##[elementArrayFinder.map](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L370)
 #### Use as: element.all(locator).map()
 Apply a map function to each element found using the locator. The
 callback receives the web element as the first argument and the index as
@@ -590,7 +590,7 @@ Type | Description
 !webdriver.promise.Promise | A promise that resolves to an array of values returned by the map function.
 
 
-##[Protractor](https://github.com/angular/protractor/blob/master/lib/protractor.js#L448)
+##[Protractor](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L448)
 
 
 
@@ -609,7 +609,7 @@ opt_rootElement | string= | Selector element that has an ng-app in scope.
 
 
 
-##[Protractor.prototype.waitForAngular](https://github.com/angular/protractor/blob/master/lib/protractor.js#L541)
+##[Protractor.prototype.waitForMeteor](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L541)
 
 Instruct webdriver to wait until Angular has finished rendering and has
 no outstanding $http calls before continuing.
@@ -626,7 +626,7 @@ Type | Description
 !webdriver.promise.Promise | A promise that will resolve to the scripts return value.
 
 
-##[Protractor.prototype.wrapWebElement](https://github.com/angular/protractor/blob/master/lib/protractor.js#L582)
+##[Protractor.prototype.wrapWebElement](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L582)
 
 Wrap a webdriver.WebElement with protractor specific functionality.
 
@@ -649,7 +649,7 @@ Type | Description
 [webdriver.WebElement](#webdriverwebelement) | the wrapped web element.
 
 
-##[element.$](https://github.com/angular/protractor/blob/master/lib/protractor.js#L605)
+##[element.$](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L605)
 #### Use as: $()
 Shortcut for querying the document directly with css.
 
@@ -686,7 +686,7 @@ Type | Description
 &#33;[webdriver.WebElement](#webdriverwebelement) | 
 
 
-##[element.findElement](https://github.com/angular/protractor/blob/master/lib/protractor.js#L628)
+##[element.findElement](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L628)
 
 
 
@@ -702,7 +702,7 @@ Type | Description
 &#33;[webdriver.WebElement](#webdriverwebelement) | 
 
 
-##[element.$$](https://github.com/angular/protractor/blob/master/lib/protractor.js#L645)
+##[element.$$](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L645)
 #### Use as: $$()
 Shortcut for querying the document directly with css.
 
@@ -745,7 +745,7 @@ Type | Description
 !webdriver.promise.Promise | A promise that will be resolved to an array of the located {@link webdriver.WebElement}s.
 
 
-##[element.findElements](https://github.com/angular/protractor/blob/master/lib/protractor.js#L675)
+##[element.findElements](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L675)
 
 
 
@@ -761,7 +761,7 @@ Type | Description
 !webdriver.promise.Promise | A promise that will be resolved to an array of the located {@link webdriver.WebElement}s.
 
 
-##[element.isElementPresent](https://github.com/angular/protractor/blob/master/lib/protractor.js#L699)
+##[element.isElementPresent](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L699)
 
 
 
@@ -777,7 +777,7 @@ Type | Description
 !webdriver.promise.Promise | A promise that will be resolved with whether an element could be located on the page.
 
 
-##[element.evaluate](https://github.com/angular/protractor/blob/master/lib/protractor.js#L715)
+##[element.evaluate](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L715)
 
 Evalates the input as if it were on the scope of the current element.
 
@@ -803,7 +803,7 @@ Type | Description
     will be returned as a WebElement.
 
 
-##[Protractor.prototype.findElement](https://github.com/angular/protractor/blob/master/lib/protractor.js#L734)
+##[Protractor.prototype.findElement](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L734)
 
 Waits for Angular to finish rendering before searching for elements.
 
@@ -819,7 +819,7 @@ Type | Description
 &#33;[webdriver.WebElement](#webdriverwebelement) | 
 
 
-##[Protractor.prototype.findElements](https://github.com/angular/protractor/blob/master/lib/protractor.js#L752)
+##[Protractor.prototype.findElements](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L752)
 
 Waits for Angular to finish rendering before searching for elements.
 
@@ -835,7 +835,7 @@ Type | Description
 !webdriver.promise.Promise | A promise that will be resolved to an array of the located {@link webdriver.WebElement}s.
 
 
-##[Protractor.prototype.isElementPresent](https://github.com/angular/protractor/blob/master/lib/protractor.js#L777)
+##[Protractor.prototype.isElementPresent](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L777)
 
 Tests if an element is present on the page.
 
@@ -851,7 +851,7 @@ Type | Description
 !webdriver.promise.Promise | A promise that will resolve to whether the element is present on the page.
 
 
-##[Protractor.prototype.addMockModule](https://github.com/angular/protractor/blob/master/lib/protractor.js#L793)
+##[Protractor.prototype.addMockModule](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L793)
 
 Add a module to load before Angular whenever Protractor.get is called.
 Modules will be registered after existing modules already on the page,
@@ -872,7 +872,7 @@ script | !string&#124;Function | The JavaScript to load the module.
 
 
 
-##[Protractor.prototype.clearMockModules](https://github.com/angular/protractor/blob/master/lib/protractor.js#L807)
+##[Protractor.prototype.clearMockModules](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L807)
 
 Clear the list of registered mock modules.
 
@@ -882,7 +882,7 @@ Clear the list of registered mock modules.
 
 
 
-##[Protractor.prototype.removeMockModule](https://github.com/angular/protractor/blob/master/lib/protractor.js#L815)
+##[Protractor.prototype.removeMockModule](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L815)
 
 Remove a registered mock module.
 
@@ -899,7 +899,7 @@ name | !string | The name of the module to remove.
 
 
 
-##[Protractor.prototype.get](https://github.com/angular/protractor/blob/master/lib/protractor.js#L825)
+##[Protractor.prototype.get](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L825)
 
 See webdriver.WebDriver.get
 
@@ -922,7 +922,7 @@ opt_timeout | number= | Number of seconds to wait for Angular to start.
 
 
 
-##[Protractor.prototype.getLocationAbsUrl](https://github.com/angular/protractor/blob/master/lib/protractor.js#L892)
+##[Protractor.prototype.getLocationAbsUrl](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L892)
 
 Returns the current absolute url from AngularJS.
 
@@ -932,7 +932,7 @@ Returns the current absolute url from AngularJS.
 
 
 
-##[Protractor.prototype.debugger](https://github.com/angular/protractor/blob/master/lib/protractor.js#L900)
+##[Protractor.prototype.debugger](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/protractor.js#L900)
 
 Pauses the test and injects some helper functions into the browser, so that
 debugging may be done in the browser console.
@@ -957,7 +957,7 @@ debugger.
 
 
 
-##[ProtractorBy](https://github.com/angular/protractor/blob/master/lib/locators.js#L6)
+##[ProtractorBy](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/locators.js#L6)
 
 The Protractor Locators. These provide ways of finding elements in
 Angular applications by binding, model, etc.
@@ -968,7 +968,7 @@ Angular applications by binding, model, etc.
 
 
 
-##[WebdriverBy.prototype](https://github.com/angular/protractor/blob/master/lib/locators.js#L15)
+##[WebdriverBy.prototype](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/locators.js#L15)
 
 webdriver's By is an enum of locator functions, so we must set it to
 a prototype before inheriting from it.
@@ -979,7 +979,7 @@ a prototype before inheriting from it.
 
 
 
-##[ProtractorBy.prototype.addLocator](https://github.com/angular/protractor/blob/master/lib/locators.js#L22)
+##[ProtractorBy.prototype.addLocator](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/locators.js#L22)
 #### Use as: by.addLocator()
 Add a locator to this instance of ProtractorBy. This locator can then be
 used with element(by.<name>(<args>)).
@@ -1000,7 +1000,7 @@ script | function&#124;string | A script to be run in the context of the browser
 
 
 
-##[ProtractorBy.prototype.binding](https://github.com/angular/protractor/blob/master/lib/locators.js#L61)
+##[ProtractorBy.prototype.binding](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/locators.js#L61)
 #### Use as: by.binding()
 Find an element by binding.
 
@@ -1038,7 +1038,7 @@ Type | Description
 {findElementsOverride: findElementsOverride, message: string} | 
 
 
-##[ProtractorBy.prototype.select](https://github.com/angular/protractor/blob/master/lib/locators.js#L90)
+##[ProtractorBy.prototype.select](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/locators.js#L90)
 
 DEPRECATED - use 'model' instead.
 
@@ -1058,7 +1058,7 @@ element(by.select('user'));
 
 
 
-##[ProtractorBy.prototype.selectedOption](https://github.com/angular/protractor/blob/master/lib/locators.js#L109)
+##[ProtractorBy.prototype.selectedOption](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/locators.js#L109)
 
 
 
@@ -1078,7 +1078,7 @@ element(by.selectedOption("user"));
 
 
 
-##[ProtractorBy.prototype.input](https://github.com/angular/protractor/blob/master/lib/locators.js#L126)
+##[ProtractorBy.prototype.input](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/locators.js#L126)
 
 @DEPRECATED - use 'model' instead.
 
@@ -1098,7 +1098,7 @@ element(by.input('user'));
 
 
 
-##[ProtractorBy.prototype.model](https://github.com/angular/protractor/blob/master/lib/locators.js#L144)
+##[ProtractorBy.prototype.model](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/locators.js#L144)
 #### Use as: by.model()
 Find an element by ng-model expression.
 
@@ -1127,7 +1127,7 @@ model | string | ng-model expression.
 
 
 
-##[ProtractorBy.prototype.buttonText](https://github.com/angular/protractor/blob/master/lib/locators.js#L168)
+##[ProtractorBy.prototype.buttonText](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/locators.js#L168)
 
 Find a button by text.
 
@@ -1160,7 +1160,7 @@ Type | Description
 {findElementsOverride: findElementsOverride, message: string} | 
 
 
-##[ProtractorBy.prototype.partialButtonText](https://github.com/angular/protractor/blob/master/lib/locators.js#L190)
+##[ProtractorBy.prototype.partialButtonText](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/locators.js#L190)
 
 Find a button by partial text.
 
@@ -1193,7 +1193,7 @@ Type | Description
 {findElementsOverride: findElementsOverride, message: string} | 
 
 
-##[ProtractorBy.prototype.textarea](https://github.com/angular/protractor/blob/master/lib/locators.js#L213)
+##[ProtractorBy.prototype.textarea](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/locators.js#L213)
 
 DEPRECATED - use 'model' instead.
 
@@ -1213,7 +1213,7 @@ element(by.textarea('user'));
 
 
 
-##[ProtractorBy.prototype.repeater](https://github.com/angular/protractor/blob/master/lib/locators.js#L231)
+##[ProtractorBy.prototype.repeater](https://github.com/JamesMGreene/meteor-storm/blob/master/lib/locators.js#L231)
 
 Find elements inside an ng-repeat.
 

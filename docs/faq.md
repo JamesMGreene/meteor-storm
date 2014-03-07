@@ -9,7 +9,7 @@ performing any action (such as finding an element or sending a command to
 an element). If your application continuously polls $timeout or $http, it will
 never be registered as completely loaded. You should use the
 [$interval service](https://github.com/angular/angular.js/blob/master/src/ng/interval.js) for anything that polls continuously (introduced in Angular 1.2rc3). Further
-discussion is in [issue 49](https://github.com/angular/protractor/issues/49).
+discussion is in [issue 49](https://github.com/JamesMGreene/meteor-storm/issues/49).
 
 You may also be running into a timeout because your page is slow to load
 or perform actions. By default, Protractor sets the timeout for actions to
@@ -22,7 +22,7 @@ options.
   }
 ```
 
-Check out the [debugging doc](https://github.com/angular/protractor/blob/master/docs/debugging.md#timeouts)
+Check out the [debugging doc](https://github.com/JamesMGreene/meteor-storm/blob/master/docs/debugging.md#timeouts)
 for more information.
 
 Why both Karma and Protractor? When do I use which?
@@ -55,7 +55,7 @@ page is not written with Angular, you'll need to interact with it via
 unwrapped webdriver, which can be accessed like `browser.driver.get()`. 
 
 You can put your log-in code into an `onPrepare` function, which will be run
-once before any of your tests. See [this example](https://github.com/angular/protractor/blob/master/spec/login/login_spec.js).
+once before any of your tests. See [this example](https://github.com/JamesMGreene/meteor-storm/blob/master/spec/login/login_spec.js).
 
 The result of `getText` from an input element is always empty
 -------------------------------------------------------------
@@ -83,4 +83,4 @@ browser.executeScript('your script as a string')
 How do I produce an XML report of my test results?
 --------------------------------------------------
 
-Use jasmine-reporters and add a JUnit XML Reporter. Check out [this example](https://github.com/angular/protractor/blob/master/spec/junitOutputConf.js).
+Use jasmine-reporters and add a JUnit XML Reporter. Check out [this example](https://github.com/JamesMGreene/meteor-storm/blob/master/spec/junitOutputConf.js).

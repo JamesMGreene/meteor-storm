@@ -21,7 +21,7 @@ module.exports = function(config) {
    *     name using a sequence.
    * filter-jsdoc: Filter the functions that will not be part of the output
    *     documentation and generate a unique name for the output partial file.
-   * add-links: Add links to the source code for protractor.js, locators.js,
+   * add-links: Add links to the source code for storm.js, locators.js,
    *     and webdriver.js.
    * add-toc: Add the table of contents.
    */
@@ -51,12 +51,12 @@ module.exports = function(config) {
 
   config.set('processing.tagDefinitions', tagDefs);
 
-  // Base path is the protractor root dir.
+  // Base path is the storm root dir.
   var basePath = path.resolve(packagePath, '..');
 
-  // Generate documentation for protractor, locators, and webdriver.
+  // Generate documentation for storm, locators, and webdriver.
   config.set('source.files', [
-    {pattern: 'lib/**/protractor.js', basePath: basePath},
+    {pattern: 'lib/**/storm.js', basePath: basePath},
     {pattern: 'lib/**/locators.js', basePath: basePath},
     {pattern: 'node_modules/selenium-webdriver/lib/webdriver/webdriver.js',
       basePath: basePath}

@@ -2,7 +2,7 @@
 // output test results in XML format. Before running, you will need to
 // npm install jasmine-reporters
 
-// The main suite of Protractor tests.
+// The main suite of MeteorStorm tests.
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
 
@@ -16,7 +16,7 @@ exports.config = {
 
   onPrepare: function() {
     // The require statement must be down here, since jasmine-reporters
-    // needs jasmine to be in the global and protractor does not guarantee
+    // needs jasmine to be in the global and storm does not guarantee
     // this until inside the onPrepare function.
     require('jasmine-reporters');
     jasmine.getEnv().addReporter(
