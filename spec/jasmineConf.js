@@ -5,7 +5,7 @@ exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
 
   specs: [
-    'login/*_spec.js'
+    'jasmine/*_spec.js'
   ],
 
   chromeOnly: false,
@@ -16,10 +16,12 @@ exports.config = {
     },
     {
       'browserName': 'firefox'
-    },
+    }
+    /*,
     {
       'browserName': 'safari'
     }
+    */
   ],
 
   jasmineNodeOpts: {

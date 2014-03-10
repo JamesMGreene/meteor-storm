@@ -1,16 +1,12 @@
-require('../../jasminewd');
+// Require "JasmineWD" (WebDriver) to help with asynchronous testing.
+require('protractor/jasminewd');
+
 
 describe('pages requiring authentication', function() {
   beforeEach(function() {
     //
     // TODO: Logout (if logged in)!
     //
-  });
-
-  it('should check your premise', function() {
-    expect(browser.baseUrl).toEqual('http://localhost:3000');
-    expect(browser.params.login.email).toEqual('jane@doe.com');
-    expect(browser.params.login.password).toEqual('p@ssw0rd');
   });
 
 
@@ -29,11 +25,16 @@ describe('pages requiring authentication', function() {
   });
 
 
-  it('should should redirect if URL hack is used', function() {
+  it('should not redirect if URL hack is used', function() {
     browser.get('/?noExternalLogout=true');
 
-    browser.driver.getCurrentUrl().then(function(url) {
-      expect(url).toEqual(browser.baseUrl + '/?noExternalLogout=true');
+    browser.driver.wait(function() {
+      return browser.driver.getCurrentUrl().then(function(url) {
+        if (url === browser.baseUrl + '/?noExternalLogout=true') {
+          expect(url).toEqual(browser.baseUrl + '/?noExternalLogout=true');
+          return true;
+        }
+      });
     });
   });
 
@@ -100,21 +101,9 @@ describe('pages requiring authentication', function() {
 */
 
     // Hover over an item
-    var studentsMenu;
-    try {
-      studentsMenu = browser.driver.findElement(by.linkText('Students'));
-      browser.actions().mouseMove().perform();
-    }
-    catch (e) {
-      if (('' + e).indexOf('Unknown command: mouseMoveTo') !== -1) {
-        browser.driver.wait(function() {
-          browser.driver.executeAsyncScript(clientSideScripts.simulateMouseOver, studentsMenu).then(function(result) {
-            return typeof result === "boolean";
-          });
-        });
-      }
-    }
-
+    var studentsMenu = browser.driver.findElement(by.linkText('Students'));
+    browser.actions().mouseMove(studentsMenu).perform();
+    
     // Click the newly visible link
     browser.driver.findElement(by.linkText('Add New Students')).click();
 

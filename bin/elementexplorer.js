@@ -21,7 +21,7 @@
  *
  * or
  *
- *     > browser.get('http://www.angularjs.org')
+ *     > browser.get('http://www.meteor.com/')
  *
  * try just
  *

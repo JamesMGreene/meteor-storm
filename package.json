@@ -1,7 +1,7 @@
 {
   "name": "meteor-storm",
   "description": "WebDriver E2E test wrapper for Meteor.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/JamesMGreene/meteor-storm",
   "license": "MIT",
   "keywords": [
@@ -15,28 +15,13 @@
     "webdriverjs",
     "selenium"
   ],
-  "author": "James M. Greene <james.m.greene@gmail.com> (http://jamesgreene.net/)",
-  "dependencies": {
-    "selenium-webdriver": "~2.40.0",
-    "minijasminenode": ">=0.2.7",
-    "saucelabs": "~0.1.0",
-    "glob": ">=3.1.14",
-    "adm-zip": ">=0.4.2",
-    "optimist": "~0.6.0",
-    "q": "1.0.0"
+  "author": {
+    "name": "James M. Greene",
+    "email": "james.m.greene@gmail.com",
+    "url": "http://jamesgreene.net/"
   },
-  "devDependencies": {
-    "expect.js": "~0.2.0",
-    "chai": "~1.8.1",
-    "chai-as-promised": "~4.1.0",
-    "jasmine-reporters": "~0.2.1",
-    "mocha": "~1.16.0",
-    "cucumber": "~0.3.3",
-    "express": "~3.3.4",
-    "lodash": "~2.4.1",
-    "rimraf": "~2.2.6",
-    "dgeni-packages": "~0.3.1",
-    "dgeni": "~0.2.0"
+  "peerDependencies": {
+    "protractor": "^0.20.1"
   },
   "repository": {
     "type": "git",
@@ -48,11 +33,12 @@
   },
   "main": "lib/storm.js",
   "scripts": {
-    "test": "node lib/cli.js spec/withLoginConf.js"
+    "test": "node lib/cli.js spec/jasmineConf.js; node lib/cli.js spec/mochaConf.js"
   },
-  "webdriverVersions": {
-    "selenium": "2.40.0",
-    "chromedriver": "2.9",
-    "iedriver": "2.40.0"
+  "devDependencies": {
+    "mocha-as-promised": "^2.0.0",
+    "chai-as-promised": "^4.1.1",
+    "chai": "^1.9.0",
+    "mocha": "^1.17.1"
   }
 }

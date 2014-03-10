@@ -19,8 +19,7 @@ exports.config = {
     // needs jasmine to be in the global and storm does not guarantee
     // this until inside the onPrepare function.
     require('jasmine-reporters');
-    jasmine.getEnv().addReporter(
-      new jasmine.JUnitXmlReporter('xmloutput', true, true));
+    jasmine.getEnv().addReporter(new jasmine.JUnitXmlReporter('xmloutput', true, true));
   },
 
   params: {
