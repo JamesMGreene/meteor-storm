@@ -1,7 +1,7 @@
 {
   "name": "meteor-storm",
   "description": "WebDriver E2E test wrapper for Meteor.",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "homepage": "https://github.com/JamesMGreene/meteor-storm",
   "license": "MIT",
   "keywords": [
