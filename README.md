@@ -96,15 +96,15 @@ WebdriverJS does not natively include the selenium server - you must start a sta
 To use with chrome browsers, [download chromedriver](http://chromedriver.storage.googleapis.com/index.html).
 [More information about chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
 
-The `webdriver-manager` script is included in the npm package to manage downloads for you. To see the options, run:
+The `wdmgr` (`webdriver-manager`) script is included in the npm package to manage downloads for you. To see the options, run:
 
     npm install -g storm
-    webdriver-manager
+    wdmgr
 
 Download and start the selenium server with:
 
-    webdriver-manager update
-    webdriver-manager start
+    wdmgr update
+    wdmgr start
 
 Note the [Java Development Kit (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) is also required to run the webdriver. You may have to download and install it if your computer does not already have it.
 
