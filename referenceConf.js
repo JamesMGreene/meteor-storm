@@ -80,8 +80,7 @@ exports.config = {
   // with relative paths will be prepended with this.
   baseUrl: 'http://localhost:8000',
 
-  // Selector for the element housing the angular app - this defaults to
-  // body, but is necessary if ng-app is on a descendant of <body>  
+  // Selector for the element housing the Meteor app - this defaults to body
   rootElement: 'body',
 
   // A callback function called once storm is ready and available, and

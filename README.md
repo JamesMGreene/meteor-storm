@@ -1,41 +1,39 @@
-Meteor Storm [![Build Status](https://travis-ci.org/JamesMGreene/meteor-storm.png?branch=master)](https://travis-ci.org/JamesMGreene/meteor-storm)
+MeteorStorm [![Build Status](https://travis-ci.org/JamesMGreene/meteor-storm.png?branch=master)](https://travis-ci.org/JamesMGreene/meteor-storm)
 ============
 
-Meteor Storm is an end to end test framework for [Meteor](http://www.meteor.com/) applications built on top of [WebDriverJS](https://code.google.com/p/selenium/wiki/WebDriverJs). Meteor Storm runs tests against your application running in a real browser, interacting with it as a user would.
+MeteorStorm is an end to end test framework for [Meteor](http://www.meteor.com/) applications built on top of [Protractor](https://github.com/angular/protractor) and [WebDriverJS](https://code.google.com/p/selenium/wiki/WebDriverJs). MeteorStorm runs tests against your application running in a real browser, interacting with it as a user would.
 
-Meteor Storm can be run as a standalone binary, or included into your tests as a library. Use [Meteor Storm as a library](https://github.com/JamesMGreene/meteor-storm/blob/master/docs/library-only.md) if you would like to manage WebDriver and your test setup yourself.
-
-For more information, [read the docs](https://github.com/JamesMGreene/meteor-storm/tree/master/docs/getting-started.md), or head over to the [FAQ](https://github.com/JamesMGreene/meteor-storm/blob/master/docs/faq.md).
+MeteorStorm can be run as a standalone binary, or included into your tests as a library. Use MeteorStorm as a library if you would like to manage WebDriver and your test setup yourself.
 
 
 To run the sample tests
 -----------------------
 
-Install Meteor Storm with:
+Install MeteorStorm with:
 
     npm install -g meteor-storm
 
 Start up a selenium server (See the appendix below for help with this). By default, the tests expect the selenium server to be running at `http://localhost:4444/wd/hub`.
 
-The node module's example folder contains a simple test suite which runs against angularjs.org. Run with: 
+The node module's `example` folder contains a simple test suite which runs against [meteor.com](http://www.meteor.com/). Run with: 
 
     storm example/conf.js
 
 
-Using the Meteor Storm runner
+Using the MeteorStorm Runner
 -----------------------------
 
-The Meteor Storm runner is a binary which accepts a config file. Install storm with
+The MeteorStorm runner is a binary which accepts a config file. Install `storm` with:
 
     npm install -g meteor-storm
     # Run the line below to see command line options
     storm
 
-You will need a *configuration file* containing setup info and *test files* containing the actual test scripts. The config file specifies how the runner should start webdriver, where your test files are, and global setup options. The test files use Jasmine framework by default ([read about using mocha instead](https://github.com/JamesMGreene/meteor-storm/tree/master/docs/using-mocha.md)).
+You will need a _configuration file_ containing setup info and *test files* containing the actual test scripts. The config file specifies how the runner should start webdriver, where your test files are, and global setup options. The test files use Jasmine framework by default but can also use Mocha or Cucumber.
 
 Create a configuration file - an example with detailed comments is shown in `node_modules/meteor-storm/referenceConf.js`. Edit the configuration file to point to your test files.
 
-```javascript
+```js
 // myConf.js
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
@@ -43,16 +41,16 @@ exports.config = {
 }
 ```
 
-The configuration file must specify a way to connection to webdriver. This can be
- *   `seleniumAddress`: The address of a running selenium standalone server.
- *   `seleniumServerJar`: The location of the selenium standalone .jar file on your machine. Meteor Storm will use this to start up the selenium server.
- *   `sauceUser` and `sauceKey`: The username and key for a [SauceLabs](http://www.saucelabs.com) account. Meteor Storm will use this to run tests on SauceLabs.
+The configuration file must specify a way to connection to WebDriver. This can be
+ *   `seleniumAddress`: The address of a running Selenium standalone server.
+ *   `seleniumServerJar`: The location of the Selenium standalone .jar file on your machine. MeteorStorm will use this to start up the selenium server.
+ *   `sauceUser` and `sauceKey`: The username and key for a [SauceLabs](http://www.saucelabs.com) account. MeteorStorm will use this to run tests on SauceLabs.
 
-The runner exposes global variables `browser`, `by` and `element`. Check out [getting started docs](https://github.com/JamesMGreene/meteor-storm/blob/master/docs/getting-started.md) to learn how to write a test.
+The runner exposes global variables `browser`, `by` and `element`. Check out the `specs` folder to learn how to write a test.
 
 ```js
 // myTest.js
-describe('meteor homepage', function() {
+describe('Meteor homepage', function() {
   it('should greet the named user', function() {
     browser.get('http://www.meteor.com/');
 
@@ -65,12 +63,12 @@ describe('meteor homepage', function() {
 });
 ```
 
-Run with
+Run with:
 
     storm myConf.js
 
 
-Cloning and running Meteor Storm's own tests
+Cloning and running MeteorStorm's own tests
 --------------------------------------------
 Clone the github repository.
 
@@ -80,17 +78,17 @@ Clone the github repository.
 
 Start up a selenium server. By default, the tests expect the selenium server to be running at `http://localhost:4444/wd/hub`.
 
-Meteor Storm's test suite runs against the included testapp. Start that up with
+MeteorStorm's test suite runs against the included testapp. Start that up with:
 
     cd testapp
     ./scripts/web-server.js
 
-Then run the tests with
+Then run the tests with:
 
     npm test
 
 
-Appendix A: Setting up a standalone selenium server
+Appendix A: Setting up a standalone Selenium server
 ---------------------------------------------------
 
 WebdriverJS does not natively include the selenium server - you must start a standalone selenium server. All you need is the latest [selenium-server-standalone.](https://code.google.com/p/selenium/downloads/list). To drive individual browsers, you may need to install separate driver binaries.
@@ -98,12 +96,12 @@ WebdriverJS does not natively include the selenium server - you must start a sta
 To use with chrome browsers, [download chromedriver](http://chromedriver.storage.googleapis.com/index.html).
 [More information about chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
 
-The `webdriver-manager` script is included in the npm package to manage downloads for you. To see the options, run
+The `webdriver-manager` script is included in the npm package to manage downloads for you. To see the options, run:
 
     npm install -g storm
     webdriver-manager
 
-Download and start the selenium server with
+Download and start the selenium server with:
 
     webdriver-manager update
     webdriver-manager start

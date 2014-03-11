@@ -9,3 +9,4 @@ libpeerconnection.log
 changes.sh
 xmloutput*
 .travis.yml
+.DS_Store
