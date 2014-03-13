@@ -1,7 +1,7 @@
 {
   "name": "meteor-storm",
   "description": "WebDriver E2E test wrapper for Meteor.",
-  "version": "0.4.4",
+  "version": "0.5.0",
   "homepage": "https://github.com/JamesMGreene/meteor-storm",
   "license": "MIT",
   "keywords": [
@@ -38,7 +38,8 @@
   "dependencies": {
     "optimist": "^0.6.1",
     "glob": "^3.2.9",
-    "selenium-webdriver": "^2.40.0"
+    "selenium-webdriver": "^2.40.0",
+    "mkdirp": "^0.3.5"
   },
   "devDependencies": {
     "mocha-as-promised": "^2.0.0",
